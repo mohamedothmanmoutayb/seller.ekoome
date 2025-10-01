@@ -1,0 +1,255 @@
+{
+  "123456789": {
+    "state": "error",
+    "collected_data": {},
+    "product": null,
+    "missing_fields": [
+      "name",
+      "city",
+      "address",
+      "recipient_number"
+    ],
+    "context": [
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      }
+    ],
+    "language": "fi"
+  },
+  "212701130792": {
+    "state": "error",
+    "collected_data": {},
+    "product": {
+      "id": 4,
+      "name": "OPEN BOX",
+      "price_vente": null,
+      "id_country": 11
+    },
+    "missing_fields": [
+      "name",
+      "city",
+      "address",
+      "recipient_number"
+    ],
+    "context": [
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0637\u0644\u0628 \u0645\u0646\u062a\u062c \u0645\u0646 \u0639\u0646\u062f\u0643\u0645"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0627\u0644\u0633\u0644\u0627\u0645 \u0639\u0644\u064a\u0643\u0645! \u0645\u0631\u062d\u0628\u064b\u0627 \u0628\u0643 \ud83d\ude0a. \u0634\u0646\u0648 \u0627\u0644\u0645\u0646\u062a\u062c \u0627\u0644\u0644\u064a \u0645\u0647\u062a\u0645 \u0628\u0647\u061f \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u0627\u0633\u0645 \u0623\u0648 \u0623\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0639\u0644\u064a\u0647\u060c \u0648\u0623\u0646\u0627 \u063a\u0627\u062f\u064a \u0646\u0639\u0627\u0648\u0646\u0643 \u0628\u0627\u0634 \u0646\u0643\u0645\u0644 \u0627\u0644\u0637\u0644\u0628 \u062f\u064a\u0627\u0644\u0643."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0648\u0627\u0634 \u0643\u0627\u064a\u0646 \u0634\u064a \u0645\u0646\u062a\u062c \u0627\u0644\u0644\u064a \u0645\u0647\u062a\u0645 \u0628\u0647\u061f \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u0627\u0633\u0645 \u0623\u0648 \u0623\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0639\u0644\u064a\u0647\u060c \u0648\u0623\u0646\u0627 \u0647\u0646\u0627 \u0628\u0627\u0634 \u0646\u0639\u0627\u0648\u0646\u0643 \ud83d\ude0a."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0648\u0627\u0634 \u0643\u0627\u064a\u0646 \u0634\u064a \u062d\u0627\u062c\u0629 \u0627\u0644\u0644\u064a \u0628\u063a\u064a\u062a \u062a\u0637\u0644\u0628\u0647\u0627\u061f \u0623\u0646\u0627 \u0647\u0646\u0627 \u0628\u0627\u0634 \u0646\u0639\u0627\u0648\u0646\u0643\u060c \u063a\u064a\u0631 \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644 \ud83d\ude0a."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0648\u0627\u0634 \u0643\u0627\u064a\u0646 \u0634\u064a \u0645\u0646\u062a\u062c \u0627\u0644\u0644\u064a \u0645\u0647\u062a\u0645 \u0628\u0647\u061f \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u0627\u0633\u0645 \u0623\u0648 \u0623\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0639\u0644\u064a\u0647\u060c \u0648\u0623\u0646\u0627 \u0647\u0646\u0627 \u0628\u0627\u0634 \u0646\u0639\u0627\u0648\u0646\u0643 \ud83d\ude0a."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "\u0648\u0627\u0634 \u0643\u0627\u064a\u0646 \u0634\u064a \u0645\u0646\u062a\u062c \u0627\u0644\u0644\u064a \u0645\u0647\u062a\u0645 \u0628\u0647\u061f \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u0627\u0633\u0645 \u0623\u0648 \u0623\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0639\u0644\u064a\u0647\u060c \u0648\u0623\u0646\u0627 \u0647\u0646\u0627 \u0628\u0627\u0634 \u0646\u0639\u0627\u0648\u0646\u0643 \ud83d\ude0a."
+      },
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0637\u0644\u0628 \u0645\u0646\u062a\u062c \u0645\u0646 \u0639\u0646\u062f\u0643\u0645"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0645\u0631\u062d\u0628\u0627! \u0634\u0646\u0648 \u0647\u0648 \u0627\u0644\u0645\u0646\u062a\u062c \u0627\u0644\u0644\u064a \u0628\u063a\u064a\u062a\u064a \u062a\u0637\u0644\u0628\u061f \u0642\u0648\u0644 \u0644\u064a \u0627\u0644\u0627\u0633\u0645 \u0623\u0648 \u0634\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0639\u0644\u064a\u0647\u060c \u0648\u0623\u0646\u0627 \u063a\u0627\u062f\u064a \u0646\u0639\u0627\u0648\u0646\u0643 \u0628\u0627\u0634 \u0646\u0643\u0645\u0644 \u0627\u0644\u0637\u0644\u0628 \u062f\u064a\u0627\u0644\u0643 \ud83d\ude0a."
+      },
+      {
+        "role": "user",
+        "content": "\u0627\u0633\u0645 \u0627\u0644\u0645\u0646\u062a\u062c open box"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0645\u0632\u064a\u0627\u0646! \u0628\u063a\u064a\u062a \u062a\u0637\u0644\u0628 \u0645\u0646\u062a\u062c \"open box\". \u0648\u0627\u0634 \u0639\u0646\u062f\u0643 \u0634\u064a \u062a\u0641\u0627\u0635\u064a\u0644 \u0625\u0636\u0627\u0641\u064a\u0629 \u0639\u0644\u0649 \u0627\u0644\u0645\u0646\u062a\u062c \u0623\u0648 \u0634\u064a \u062d\u0627\u062c\u0629 \u0645\u0639\u064a\u0646\u0629 \u0643\u062a\u0642\u0635\u062f \u0628\u0647\u0627\u061f \u0648\u0644\u0627 \u0646\u0643\u0645\u0644 \u0645\u0639\u0627\u0643 \u0627\u0644\u0637\u0644\u0628 \u0645\u0628\u0627\u0634\u0631\u0629\u061f \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0634\u0648\u0641 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u062f\u064a\u0627\u0644\u064a"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      },
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0634\u0648\u0641 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u062f\u064a\u0627\u0644\u064a"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      },
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0634\u0648\u0641 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u062f\u064a\u0627\u0644\u064a"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      },
+      {
+        "role": "user",
+        "content": "\u0628\u063a\u064a\u062a \u0646\u0634\u0648\u0641 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u062f\u064a\u0627\u0644\u064a"
+      },
+      {
+        "role": "assistant",
+        "content": "\u0639\u0630\u0631\u064b\u0627\u060c \u062d\u062f\u062b \u062e\u0637\u0623. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
+      }
+    ],
+    "language": "ar",
+    "product_name": "open box",
+    "product_sku": null
+  },
+  "212782315209": {
+    "state": "error",
+    "collected_data": {},
+    "product": null,
+    "missing_fields": [
+      "name",
+      "city",
+      "address",
+      "recipient_number"
+    ],
+    "context": [
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry, I encountered an error. Please try again."
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Kayn chi haja lli bghiti tsawal 3liha wla t9id? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Wach bghiti tsawal 3la chi produit wla tsift chi commande? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Wach bghiti tsawal 3la chi produit wla tsift chi commande? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Wach bghiti tsawal 3la chi produit wla tsift chi commande? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Wach bghiti tsawal 3la chi produit wla tsift chi commande? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": ""
+      },
+      {
+        "role": "assistant",
+        "content": "Salam! Wach bghiti tsawal 3la chi produit wla tsift chi commande? Ghadi n3awnk b kol farah! \ud83d\ude0a"
+      }
+    ],
+    "language": "en"
+  }
+}

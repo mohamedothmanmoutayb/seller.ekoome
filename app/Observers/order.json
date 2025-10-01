@@ -1,0 +1,701 @@
+{
+    "info": {
+        "name": "Api Seller V2.0",
+        "description": "Api DigyLog v2.0",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "Order",
+            "item": [{
+                    "name": "Add orders",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "POST",
+                        "header": [{
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"network\": 1,// Get from /networks\n    \"store\": \"store1\",// Get from /stores\n    \"mode\": 1,// 1 for standard order\n    \"status\":0,// 0 for add and not send orders, 1 for add & send  orders\n    \"orders\": [\n        {\n            \"num\": \"commande 01\",\n            \"type\": 1,  // 1 for normal delivery,\n            \"name\": \"Abdo\",\n            \"phone\": \"0728597208\",\n            \"address\": \"Agadir\",\n            \"city\": \"Agadir\",\n            \"price\": 35,\n            \"refs\": [\n                {\n                    \"designation\": \"test designation\",\n                    \"quantity\": 1\n                }\n            ],\n            \"port\": 1,  // 1 fees paid by seller, 2 fees ,\n            \"openproduct\": 1,  // 1 for allow open product, 2 Fees paid in advance,\n            \"note\": \"livraision matin\"\n        },\n        {\n            \"num\": \"commande 02\",\n            \"type\": 1,\n            \"name\": \"Abdo\",\n            \"phone\": \"0728597208\",\n            \"address\": \"Agadir\",\n            \"city\": \"Agadir\",\n            \"price\": 35,\n            \"refs\": [\n                {\n                    \"designation\": \"test designation\",\n                    \"quantity\": 1\n                }\n            ],\n            \"port\": 1,\n            \"note\": \"livraision matin\"\n        }\n    ]\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/orders",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "orders"
+                            ]
+                        },
+                        "description": "This request allow you to add an order"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get infos of specific order",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/order/:traking/infos",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "order",
+                                ":traking",
+                                "infos"
+                            ],
+                            "variable": [{
+                                "key": "traking",
+                                "value": "S5000CK",
+                                "description": "(Required) Traking of the order"
+                            }]
+                        },
+                        "description": "This request allow you to retrieve the info of the order"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get refs of specific order",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/order/:traking/refs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "order",
+                                ":traking",
+                                "refs"
+                            ],
+                            "variable": [{
+                                "key": "traking",
+                                "value": "S5000CK",
+                                "description": "(Required) Traking of the order"
+                            }]
+                        },
+                        "description": "This request allow you to retrieve the refs of the order"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get historics of specific orders",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                                "key": "Accept",
+                                "value": "application/json,",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/historics?trakings=S4001940AA,S4001941BA",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "historics"
+                            ],
+                            "query": [{
+                                "key": "trakings",
+                                "value": "S4001940AA,S4001941BA"
+                            }]
+                        },
+                        "description": "This request allow you to retrieve the historics of the order"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Download orders labels",
+                    "event": [{
+                        "listen": "test",
+                        "script": {
+                            "exec": [
+                                ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {}
+                        }
+                    }],
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "POST",
+                        "header": [{
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"orders\":[\"S4001940AA\",\"S4001941BA\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/labels",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "labels"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "BL",
+            "item": [{
+                    "name": "Download BL",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }],
+                        "url": {
+                            "raw": "{{baseUrl}}/bl/:id/pdf",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "bl",
+                                ":id",
+                                "pdf"
+                            ],
+                            "variable": [{
+                                "key": "id",
+                                "value": ""
+                            }]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Download BL labels",
+                    "event": [{
+                        "listen": "test",
+                        "script": {
+                            "exec": [
+                                ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {}
+                        }
+                    }],
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "POST",
+                        "header": [{
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"bl\":498600\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/labels",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "labels"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Complaint",
+            "item": [{
+                    "name": "Add complaint",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "POST",
+                        "header": [{
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    // voir docs api 2\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/complaints",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "complaints"
+                            ]
+                        },
+                        "description": "This request allow you to add an order"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get List of complaint types",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "stores"
+                            ]
+                        },
+                        "description": "This request allow to get the list of your stores"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Store",
+            "item": [{
+                    "name": "Add Store",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "POST",
+                        "header": [{
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\":\"test\",\r\n    \"phone\":\"0600000203\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "stores"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get List of stores",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [{
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }]
+                        },
+                        "method": "GET",
+                        "header": [{
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Referer",
+                                "value": "{{referer}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "stores"
+                            ]
+                        },
+                        "description": "This request allow to get the list of your stores"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "item": [{
+                "name": "Get List of cities",
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [{
+                            "key": "token",
+                            "value": "{{token}}",
+                            "type": "string"
+                        }]
+                    },
+                    "method": "GET",
+                    "header": [{
+                            "key": "Accept",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "{{baseUrl}}/cities",
+                        "host": [
+                            "{{baseUrl}}"
+                        ],
+                        "path": [
+                            "cities"
+                        ]
+                    },
+                    "description": "This request allow to get the list of your stores"
+                },
+                "response": []
+            }]
+        },
+        {
+            "name": "FulfilmentCenter",
+            "item": [{
+                "name": "Get List of fulfilment centers",
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [{
+                            "key": "token",
+                            "value": "{{token}}",
+                            "type": "string"
+                        }]
+                    },
+                    "method": "GET",
+                    "header": [{
+                            "key": "Accept",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "{{baseUrl}}/fc",
+                        "host": [
+                            "{{baseUrl}}"
+                        ],
+                        "path": [
+                            "fc"
+                        ]
+                    },
+                    "description": "This request allow to get the list of your stores"
+                },
+                "response": []
+            }]
+        },
+        {
+            "name": "Network",
+            "item": [{
+                "name": "Get List of networks",
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [{
+                            "key": "token",
+                            "value": "{{token}}",
+                            "type": "string"
+                        }]
+                    },
+                    "method": "GET",
+                    "header": [{
+                            "key": "Accept",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "{{baseUrl}}/networks",
+                        "host": [
+                            "{{baseUrl}}"
+                        ],
+                        "path": [
+                            "networks"
+                        ]
+                    },
+                    "description": "This request allow to get the list of networks"
+                },
+                "response": []
+            }]
+        },
+        {
+            "name": "status",
+            "item": [{
+                "name": "Get List of status",
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [{
+                            "key": "token",
+                            "value": "{{token}}",
+                            "type": "string"
+                        }]
+                    },
+                    "method": "GET",
+                    "header": [{
+                            "key": "Accept",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Referer",
+                            "value": "{{referer}}",
+                            "type": "text"
+                        }
+                    ],
+                    "url": {
+                        "raw": "{{baseUrl}}/networks",
+                        "host": [
+                            "{{baseUrl}}"
+                        ],
+                        "path": [
+                            "networks"
+                        ]
+                    },
+                    "description": "This request allow to get the list of networks"
+                },
+                "response": []
+            }]
+        },
+        {
+            "name": "webhook",
+            "item": [{
+                "name": "Add or Update webhook",
+                "request": {
+                    "method": "GET",
+                    "header": []
+                },
+                "response": []
+            }]
+        }
+    ],
+    "event": [{
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                    "pm.request.headers.add({\r",
+                    "    key: 'Authorization',\r",
+                    "    value: 'Bearer pm.variables.get(\"token\")'\r",
+                    "});\r",
+                    "\r",
+                    "// Add other request headers\r",
+                    "pm.request.headers.add(\r",
+                    "    {\r",
+                    "        key: 'Content-Type',\r",
+                    "        value: 'application/json'\r",
+                    "    },\r",
+                    "\r",
+                    "    {\r",
+                    "        key: 'Referer',\r",
+                    "        value: pm.variables.get(\"referer\")\r",
+                    "    }\r",
+                    ");"
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [{
+            "key": "baseUrl",
+            "value": "https://api.digylog.com/api/v2/seller",
+            "type": "string"
+        },
+        {
+            "key": "referer",
+            "value": "https://apiseller.digylog.com",
+            "type": "string"
+        },
+        {
+            "key": "token",
+            "value": "ZGQxMzMxMDVlOWRmZWMxY2VlOTE1MDhkMzI1OGUyOTE0MDBmZTI4MzhjMjJhMGUwNjE5ZjQ0NDY4Y2IxYzYwYg",
+            "type": "string"
+        }
+    ]
+}

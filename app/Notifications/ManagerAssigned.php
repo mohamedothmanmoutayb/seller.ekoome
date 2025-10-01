@@ -1,0 +1,70 @@
+<?php
+
+namespace App\Notifications;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+
+class ManagerAssigned extends Notification
+{
+    use Queueable;
+    public $message;
+    public $subject;
+    public $fromEmail;
+    public $mailer;
+    public $email;
+    /**
+     * Create a new notification instance.
+     *
+     * @return void
+     */
+    public function __construct($email)
+    {
+        $this->$email = $email;
+        $this->message = 'New seller assigned to you:'.$this->$email;
+        $this->subject = 'Welcome to the European Fulfillment Center - Seller assigned';
+        $this->fromEmail = 'it@ecomfulfillment.eu';
+        $this->mailer = 'smtp';
+    }
+
+    /**
+     * Get the notification's delivery channels.
+     *
+     * @param  mixed  $notifiable
+     * @return array
+     */
+    public function via($notifiable)
+    {
+        return ['mail'];
+    }
+
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
+    public function toMail($notifiable)
+    {
+        return (new MailMessage)
+                ->mailer('smtp')
+                ->subject($this->subject)
+                ->greeting('Welcome To European Fulfillment Center Team')
+                ->line($this->message);
+    }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return array
+     */
+    public function toArray($notifiable)
+    {
+        return [
+            //
+        ];
+    }
+}
