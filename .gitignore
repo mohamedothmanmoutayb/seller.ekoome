@@ -13,7 +13,7 @@ Homestead.yaml
 /error_log
 /.htaccess
 .phpunit.cache
-
+/index.php
 ############
 /storage/framework/cache/*
 /storage/framework/sessions/*

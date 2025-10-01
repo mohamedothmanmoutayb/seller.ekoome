@@ -67,7 +67,8 @@
                           <span class="border-top w-100 position-absolute top-50 start-50 translate-middle"></span>
                         </div> -->
 
-                                                @phpif (
+                                                @php
+                                                    if (
                                                         isset($_COOKIE['login_email']) &&
                                                         isset($_COOKIE['login_pass'])
                                                     ) {
@@ -80,6 +81,7 @@
                                                         $is_remember = '';
                                                     }
                                                 @endphp
+
                                                 <form id="loginform" method="POST" action="{{ route('login') }}">
                                                     @csrf
                                                     <div class="mb-3">
