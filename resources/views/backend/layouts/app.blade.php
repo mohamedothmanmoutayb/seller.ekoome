@@ -10,16 +10,16 @@
     <meta property="fb:app_id" content="{{ env('META_APP_ID') }}" />
 
     <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/png" href="{{ asset('public/assets/images/logos/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
 
     <!-- Core Css -->
-    <link rel="stylesheet" href="{{ asset('public/assets/css/styles.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/notify.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/notify.css') }}" />
 
 
-    <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/prettify.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/libs/prismjs/themes/prism-okaidia.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/libs/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/prettify.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/libs/prismjs/themes/prism-okaidia.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/select2/dist/css/select2.min.css') }}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -345,7 +345,7 @@
   </div> --}}
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ asset('public/assets/images/logos/favicon.png') }}" alt="loader" class="lds-ripple img-fluid" />
+        <img src="{{ asset('assets/images/logos/favicon.png') }}" alt="loader" class="lds-ripple img-fluid" />
     </div>
     <div id="main-wrapper">
         <!-- Sidebar Start -->
@@ -411,44 +411,48 @@
                             <!-- --------------------------------------------------------------------------------------------------------- -->
                             <!-- Charts -->
                             <!-- --------------------------------------------------------------------------------------------------------- -->
-                           
-                              <li class="mini-nav-item has-submenu" id="mini-hr">
-                            <a href="javascript:void(0)" class="submenu-toggle" data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" data-bs-placement="right" data-bs-title="Analytics">
-                                <iconify-icon icon="solar:chart-line-duotone" class="ti"></iconify-icon>
-                            </a>
-                            <ul class="submenu" style="background-color: #f4f0ff;">
-                                 <li>
-                               <span class="sidebar-divider lg" 
-                                    style="display:block; height:4px; background-color:#2c3e50; margin: 0; border-radius:2px;">
-                                </span>
 
-                            </li>
-                                <li class="mini-nav-item ">
-                                <a href="{{ route('analytics.netprofite') }}" data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;;" data-bs-placement="right" data-bs-title="Net Profite">
-                                   <iconify-icon icon="mdi:finance" class="ti"></iconify-icon>
+                            <li class="mini-nav-item has-submenu" id="mini-hr">
+                                <a href="javascript:void(0)" class="submenu-toggle" data-bs-toggle="tooltip"
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="right"
+                                    data-bs-title="Analytics">
+                                    <iconify-icon icon="solar:chart-line-duotone" class="ti"></iconify-icon>
                                 </a>
-                                </li>
-                                <li class="mini-nav-item ">
-                                <a href="{{ route('analytics.confirmation') }}" data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;" data-bs-placement="right" data-bs-title="Confirmation Data">
-                                     <iconify-icon icon="mdi:check-decagram" class="ti"></iconify-icon>
-                                </a>
-                                </li>
-                                <li class="mini-nav-item ">
-                                <a href="{{ route('analytics.shipping') }}" data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;" data-bs-placement="right" data-bs-title="Shipping Data">
-                                    <iconify-icon icon="mdi:truck-fast-outline" class="ti"></iconify-icon>
-                                </a>
-                                </li>
+                                <ul class="submenu" style="background-color: #f4f0ff;">
+                                    <li>
+                                        <span class="sidebar-divider lg"
+                                            style="display:block; height:4px; background-color:#2c3e50; margin: 0; border-radius:2px;">
+                                        </span>
 
-                                 <li>
-                                  <span class="sidebar-divider lg" 
-                                    style="display:block; height:4px; background-color:#2c3e50; margin: 0; border-radius:2px;">
-                                </span>
-                            </li>
-                            </ul>
+                                    </li>
+                                    <li class="mini-nav-item ">
+                                        <a href="{{ route('analytics.netprofite') }}" data-bs-toggle="tooltip"
+                                            data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;;"
+                                            data-bs-placement="right" data-bs-title="Net Profite">
+                                            <iconify-icon icon="mdi:finance" class="ti"></iconify-icon>
+                                        </a>
+                                    </li>
+                                    <li class="mini-nav-item ">
+                                        <a href="{{ route('analytics.confirmation') }}" data-bs-toggle="tooltip"
+                                            data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;"
+                                            data-bs-placement="right" data-bs-title="Confirmation Data">
+                                            <iconify-icon icon="mdi:check-decagram" class="ti"></iconify-icon>
+                                        </a>
+                                    </li>
+                                    <li class="mini-nav-item ">
+                                        <a href="{{ route('analytics.shipping') }}" data-bs-toggle="tooltip"
+                                            data-bs-custom-class="custom-tooltip" style="background-color:  #f4f0ff;"
+                                            data-bs-placement="right" data-bs-title="Shipping Data">
+                                            <iconify-icon icon="mdi:truck-fast-outline" class="ti"></iconify-icon>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <span class="sidebar-divider lg"
+                                            style="display:block; height:4px; background-color:#2c3e50; margin: 0; border-radius:2px;">
+                                        </span>
+                                    </li>
+                                </ul>
                             </li>
 
 
@@ -828,7 +832,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-4 d-none d-lg-flex">
-                                                    <img src="{{ asset('public/assets/images/backgrounds/mega-dd-bg.jpg') }}"
+                                                    <img src="{{ asset('assets/images/backgrounds/mega-dd-bg.jpg') }}"
                                                         alt="mega-dd" class="img-fluid mega-dd-bg" />
                                                 </div>
                                             </div>
@@ -839,7 +843,7 @@
                         </ul>
 
                         <div class="d-block d-lg-none py-9 py-xl-0">
-                            <img src="{{ asset('public/logo.png') }}" alt="matdash-img" width="200" />
+                            <img src="{{ asset('logo.png') }}" alt="matdash-img" width="200" />
                         </div>
                         <a class="navbar-toggler p-0 border-0 nav-icon-hover-bg rounded-circle"
                             href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -915,7 +919,7 @@
                                         <a class="nav-link" href="javascript:void(0)" id="drop1"
                                             aria-expanded="false">
                                             <div class="d-flex align-items-center gap-2 lh-base">
-                                                <img src="{{ asset('public/assets/images/profile/user-1.jpg') }}"
+                                                <img src="{{ asset('assets/images/profile/user-1.jpg') }}"
                                                     class="rounded-circle" width="35" height="35"
                                                     alt="matdash-img" />
                                                 <iconify-icon icon="solar:alt-arrow-down-bold"
@@ -926,7 +930,7 @@
                                             aria-labelledby="drop1">
                                             <div class="position-relative px-4 pt-3 pb-2">
                                                 <div class="d-flex align-items-center mb-3 pb-3 border-bottom gap-6">
-                                                    <img src="{{ asset('public/assets/images/profile/user-1.jpg') }}"
+                                                    <img src="{{ asset('assets/images/profile/user-1.jpg') }}"
                                                         class="rounded-circle" width="56" height="56"
                                                         alt="matdash-img" />
                                                     <div>
@@ -980,7 +984,7 @@
                         <nav class="sidebar-nav scroll-sidebar">
                             <div class="offcanvas-header justify-content-between">
                                 <a href="{{ route('home') }}" class="text-nowrap logo-img ">
-                                    <img src="{{ asset('public/logo.png') }}" alt="Logo" class="inmobile" />
+                                    <img src="{{ asset('logo.png') }}" alt="Logo" class="inmobile" />
                                 </a>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
@@ -1133,8 +1137,8 @@
                                 </a>
                             </li>
                             <li class="nav-item d-none d-xl-flex align-items-center">
-                                <a href="{{ asset('public/logo.png') }}" class="text-nowrap nav-link">
-                                    <img src="{{ asset('public/logo.png') }}" alt="matdash-img" width="200" />
+                                <a href="{{ asset('logo.png') }}" class="text-nowrap nav-link">
+                                    <img src="{{ asset('logo.png') }}" alt="matdash-img" width="200" />
                                 </a>
                             </li>
                             {{-- <li class="nav-item d-none d-xl-flex align-items-center nav-icon-hover-bg rounded-circle">
@@ -1261,7 +1265,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-4 d-none d-lg-flex">
-                                                    <img src="{{ asset('public/assets/images/backgrounds/mega-dd-bg.jpg') }}"
+                                                    <img src="{{ asset('assets/images/backgrounds/mega-dd-bg.jpg') }}"
                                                         alt="mega-dd" class="img-fluid mega-dd-bg" />
                                                 </div>
                                             </div>
@@ -1272,7 +1276,7 @@
                         </ul>
                         <div class="d-block d-xl-none">
                             <a href="{{ route('home') }}" class="text-nowrap nav-link">
-                                <img src="{{ asset('public/logo.png') }}" alt="matdash-img" />
+                                <img src="{{ asset('logo.png') }}" alt="matdash-img" />
                             </a>
                         </div>
                         <a class="navbar-toggler nav-icon-hover p-0 border-0 nav-icon-hover-bg rounded-circle"
@@ -1333,11 +1337,11 @@
                                             </span>
 
                                         </a>
-                                        <audio id="mysoundclip2" src="{{ asset('public/notification.mp3') }}"
+                                        <audio id="mysoundclip2" src="{{ asset('notification.mp3') }}"
                                             preload="auto"></audio>
-                                        <audio id="mysoundclip3" src="{{ asset('public/error.mp3') }}"
+                                        <audio id="mysoundclip3" src="{{ asset('error.mp3') }}"
                                             preload="auto"></audio>
-                                        <audio id="mysoundclip4" src="{{ asset('public/warning.mp3') }}"
+                                        <audio id="mysoundclip4" src="{{ asset('warning.mp3') }}"
                                             preload="auto"></audio>
                                         <div id="notification-dropdown"
                                             class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up mt-3"
@@ -1469,7 +1473,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="javascript:void(0)" id="drop1" aria-expanded="false">
                                     <div class="d-flex align-items-center gap-2 lh-base">
-                                        <img src="{{ asset('public/assets/images/profile/user-1.jpg') }}"
+                                        <img src="{{ asset('assets/images/profile/user-1.jpg') }}"
                                             class="rounded-circle" width="35" height="35"
                                             alt="matdash-img" />
                                         <iconify-icon icon="solar:alt-arrow-down-bold" class="fs-2"></iconify-icon>
@@ -1479,7 +1483,7 @@
                                     aria-labelledby="drop1">
                                     <div class="position-relative px-4 pt-3 pb-2">
                                         <div class="d-flex align-items-center mb-3 pb-3 border-bottom gap-6">
-                                            <img src="{{ asset('public/assets/images/profile/user-1.jpg') }}"
+                                            <img src="{{ asset('assets/images/profile/user-1.jpg') }}"
                                                 class="rounded-circle" width="56" height="56"
                                                 alt="matdash-img" />
                                             <div>
@@ -1591,7 +1595,7 @@
                         <!-- =================== -->
 
 
-                        
+
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <span class="rounded-3">
@@ -1805,7 +1809,8 @@
 
                         <!-- relamation -->
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ route('reclamations.index') }}" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('reclamations.index') }}"
+                                aria-expanded="false">
                                 <span class="rounded-3">
                                     <iconify-icon icon="solar:airbuds-case-minimalistic-line-duotone"
                                         class="ti"></iconify-icon>
@@ -1945,7 +1950,7 @@
     </div>
     <div class="floating-chat-container">
         <button class="chat-button" id="chatButton">
-            <img src="{{ asset('public/support.png') }}" alt="Logo">
+            <img src="{{ asset('support.png') }}" alt="Logo">
         </button>
         <div class="chat-menu" id="chatMenu">
             <div class="menu-header">
@@ -2067,11 +2072,11 @@
     </div>
 
     <audio id="mysoundclip1" preload="auto">
-        <source src="{{ url('public/entred-lead.mp3') }}">
+        <source src="{{ url('entred-lead.mp3') }}">
         </source>
     </audio>
     <audio id="mysoundclip2" preload="auto">
-        <source src="{{ url('public/entred-lead.mp3') }}">
+        <source src="{{ url('entred-lead.mp3') }}">
         </source>
     </audio>
     <!-- Import Js Files -->
@@ -2079,25 +2084,25 @@
         $('input[name="date"]').daterangepicker();
     </script>
 
-    <script src="{{ asset('public/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/simplebar/dist/simplebar.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/theme/app.horizontal.init.js') }}"></script>
-    <script src="{{ asset('public/assets/js/theme/theme.js') }}"></script>
-    <script src="{{ asset('public/assets/js/theme/app.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/theme/sidebarmenu.js') }}"></script>
+    <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/simplebar/dist/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/theme/app.horizontal.init.js') }}"></script>
+    <script src="{{ asset('assets/js/theme/theme.js') }}"></script>
+    <script src="{{ asset('assets/js/theme/app.min.js') }}"></script>
+    <script src="{{ asset('assets/js/theme/sidebarmenu.js') }}"></script>
 
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="{{ asset('public/assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/dashboards/dashboard1.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/fullcalendar/index.global.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dashboards/dashboard1.js') }}"></script>
+    <script src="{{ asset('assets/libs/fullcalendar/index.global.min.js') }}"></script>
 
     <!-- This Page JS -->
-    <script src="{{ asset('public/assets/libs/select2/dist/js/select2.full.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/select2/dist/js/select2.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/forms/select2.init.js') }}"></script>
-    <script src="{{ asset('public/assets/js/plugins/prettify.js') }}"></script>
-    {{-- <script src="{{ asset('public/assets/js/plugins/notify.js') }}"></script> --}}
+    <script src="{{ asset('assets/libs/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/select2/dist/js/select2.min.js') }}"></script>
+    <script src="{{ asset('assets/js/forms/select2.init.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/prettify.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/plugins/notify.js') }}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 
@@ -2105,7 +2110,7 @@
     <script>
         setTimeout(function() {
             var script = document.createElement('script');
-            script.src = "{{ asset('public/assets/js/plugins/notify.js') }}";
+            script.src = "{{ asset('assets/js/plugins/notify.js') }}";
             document.head.appendChild(script);
 
         }, 20);
@@ -2608,14 +2613,14 @@
             console.log(data.payload.source);
             switch (data.payload.source) {
                 case 'lightfunnels':
-                    iconHtml = `<img src="/public/plateformes/lightlogo.png" style="width: 24px; height: 24px;">`;
+                    iconHtml = `<img src="/plateformes/lightlogo.png" style="width: 24px; height: 24px;">`;
                     break;
                 case 'youcan':
-                    iconHtml = `<img src="/public/youcanlogo2.webp" style="width: 24px; height: 24px;">`;
+                    iconHtml = `<img src="/youcanlogo2.webp" style="width: 24px; height: 24px;">`;
                     break;
                 case 'woocommerce':
                     iconHtml =
-                        `<img src="/public/plateformes/woocommerce-logo.png" style="width: 24px; height: 24px;">`;
+                        `<img src="/plateformes/woocommerce-logo.png" style="width: 24px; height: 24px;">`;
                     break;
                 default:
                     iconHtml = `<iconify-icon icon="solar:widget-3-line-duotone" class="fs-6"></iconify-icon>`;
