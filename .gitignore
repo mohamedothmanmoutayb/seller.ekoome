@@ -11,6 +11,7 @@ Homestead.yaml
 /.idea
 /.vscode
 /error_log
+/.htaccess
 .phpunit.cache
 
 ############
